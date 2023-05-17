@@ -1,0 +1,39 @@
+body {
+  background-color: #121215;
+  color: #eaeaea;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  padding: 64px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.events small {
+  color: #bebebf;
+  font-size: 12px;
+}
+
+.events h1 {
+  font-size: 32px;
+}
+
+.events img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.events p {
+  font-size: 18px;
+  color: #bebebf;
+  line-height: 28px;
+}
