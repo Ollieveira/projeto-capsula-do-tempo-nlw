@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
 
   display: grid;
-  grid-template-areas: 'profile timeline';
+  grid-template-areas: 'main timeline';
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh;
 }
@@ -64,14 +64,13 @@ nav {
   line-height: 28px;
 }
 
-aside {
-  grid-area: profile;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    'aside'
+    'footer';
+  grid-template-rows: 80vh 20vh;
 
   border-right: 1px solid;
   border-image: linear-gradient(#727275, #2c2c31) 1;
@@ -82,6 +81,16 @@ aside {
   background-size: auto 100%;
 }
 
+aside {
+  grid-area: aside;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
 aside * {
   animation: entering 0.7s ease-in-out;
 }
@@ -89,6 +98,8 @@ aside * {
 aside img:nth-child(2) {
   width: 160px;
   height: 160px;
+  object-fit: cover;
+  object-position: 20% 40%;
   border-radius: 50%;
 
   border: 4px solid transparent;
@@ -101,9 +112,27 @@ aside p {
   text-align: center;
 }
 
-aside span {
-  font-size: 0.75rem;
-  color: #9e9ea0;
+footer {
+  grid-area: footer;
+  padding: 25px;
+}
+
+.container {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer i {
+  font-size: 30px;
+  background: linear-gradient(to left, #d39e33, #ed5636, #633bbc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*--------------------- Responsividade ------------------------*/
@@ -115,11 +144,12 @@ aside span {
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 0.8fr;
     grid-template-areas:
-      'profile'
+      'main'
       'timeline';
   }
 
-  aside {
+  main {
+    grid-template-rows: 45vh 10vh;
     border-right: none;
     padding: 32px 12px;
   }
