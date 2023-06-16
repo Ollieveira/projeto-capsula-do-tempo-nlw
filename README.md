@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-  <img alt="projeto Habits" src=".github/preview.jpg" width="100%">
+  <img alt="Projeto Capsula do Tempo" src=".github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
